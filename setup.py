@@ -14,9 +14,8 @@ ROOT_DIR = os.path.dirname(__file__)
 
 setup(
     name="py-pdf-parser",
-    packages=find_packages(),
-    exclude=["tests.*", "tests", "docs", "docs.*"],
-    version="0.12.0",
+    packages=find_packages(exclude=["tests", "tests.*", "docs", "docs.*"]),
+    version="0.13.0",
     url="https://github.com/jstockwin/py-pdf-parser",
     license="BSD",
     description="A tool to help extracting information from structured PDFs.",
@@ -26,7 +25,7 @@ setup(
     author_email="jstockwin@gmail.com",
     include_package_data=True,
     install_requires=[
-        "pdfminer.six==20231228",
+        "pdfminer.six==20250506",
         "docopt==0.6.2",
         "wand==0.6.10",
     ],
